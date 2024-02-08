@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
+import {BrowserRouter,Routes,Route,Link,Navigate} from 'react-router-dom'
 import Home from './Home';
 import AboutUs from './AboutUs'
+import Page404 from './Page404';
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
         <Link to ="/AboutUs">About</Link>
       
         <Routes>
-          <Route path ="/Home" element={<Home />} />
-          <Route path ="/AboutUs" element={<AboutUs />} />
+          <Route path ="/home" element={<Home />} />
+          <Route path ="/aboutUs" element={<AboutUs />} />
+          {/* <Route path ="/*" element={ <Navigate to = "/" />} /> */}
+          <Route path ="/*" element={<Page404 />} />
         </Routes>
         </BrowserRouter>
         <img src={logo} className="App-logo" alt="logo" />
