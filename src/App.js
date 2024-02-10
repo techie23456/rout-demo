@@ -17,6 +17,7 @@ function App() {
         <NavLink className="nav-bar-link" to ="/AboutUs">About</NavLink>
         </div>
         <Routes>
+          <Route path ="/" element={<Home />} />
           <Route path ="/home" element={<Home />} />
           <Route path ="/aboutUs" element={<AboutUs />} />
           {/* <Route path ="/*" element={ <Navigate to = "/" />} /> */}
