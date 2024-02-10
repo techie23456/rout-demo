@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Routes,Route,Link,Navigate} from 'react-router-dom'
+import {BrowserRouter,Routes,Route,Link,Navigate,NavLink} from 'react-router-dom'
 import Home from './Home';
 import AboutUs from './AboutUs'
 import Page404 from './Page404';
@@ -12,9 +12,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <BrowserRouter>
-        <Link to ="/Home">Home</Link>
-        <Link to ="/AboutUs">About</Link>
-      
+        <div className="navbar">
+        <NavLink className="nav-bar-link" to ="/Home">Home</NavLink>
+        <NavLink className="nav-bar-link" to ="/AboutUs">About</NavLink>
+        </div>
         <Routes>
           <Route path ="/home" element={<Home />} />
           <Route path ="/aboutUs" element={<AboutUs />} />

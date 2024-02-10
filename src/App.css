@@ -7,6 +7,29 @@
   pointer-events: none;
 }
 
+.nav-bar-link:hover{
+  color: #2699FB 
+}
+
+
+
+.navbar .active{
+  color:skyblue
+}
+
+.nav-bar-link{
+  padding: 10px 20px;
+  margin-left: 10px;
+  text-decoration : none;
+  border: 2px solid white;
+}
+
+
+
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
